@@ -2,7 +2,8 @@
 
 Aplicatie gestiune beneficii angajati
 
-Functionalitati:
+Functionalitati: 
+
 	1. Register utilizator
 	2. Login utilizator
 	3. Login admin
@@ -16,6 +17,7 @@ Functionalitati:
 	11. Modificare categorie beneficii (admin)
 	
 Task-uri:
+
 	1. Baza de date
 	2. Date initiale (cont admin, beneficii, categorii beneficii)
 	3. Repository angajat
