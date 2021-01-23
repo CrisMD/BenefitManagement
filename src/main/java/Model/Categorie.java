@@ -3,6 +3,9 @@ package Model;
 public class Categorie {
     String denumire;
 
+    public Categorie() {
+    }
+
     public String getDenumire() {
         return denumire;
     }

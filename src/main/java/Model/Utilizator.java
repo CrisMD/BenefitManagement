@@ -7,6 +7,9 @@ public class Utilizator {
     String prenume;
     Boolean isAdmin;
 
+    public Utilizator() {
+    }
+
     public String getUserName() {
         return userName;
     }

@@ -5,6 +5,9 @@ public class Beneficiu {
     String descriere;
     Categorie categorie;
 
+    public Beneficiu() {
+    }
+
     public String getDenumire() {
         return denumire;
     }
