@@ -1,6 +1,8 @@
 package InterfataGrafica;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PaginaLogin
 {
@@ -28,6 +30,7 @@ public class PaginaLogin
         frame = new JFrame();
         frame.setLayout(null);
         frame.setVisible(true);
+        frame.setTitle("Login");
         frame.setBounds(0, 0, CONST_FRAME_WIDTH, CONST_FRAME_HEIGHT);
         frame.setLocationRelativeTo(null);
 
