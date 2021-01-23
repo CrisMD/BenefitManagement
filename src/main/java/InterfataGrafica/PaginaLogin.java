@@ -1,6 +1,8 @@
 package InterfataGrafica;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PaginaLogin
 {
@@ -13,7 +15,7 @@ public class PaginaLogin
     private JLabel labelUtilizator;
     private JTextField fieldUtilizator;
     private JLabel labelParola;
-    private JTextField fieldParola;
+    private JPasswordField fieldParola;
     private JButton buttonSignIn;
     private JButton buttonSignUp;
 
@@ -28,6 +30,7 @@ public class PaginaLogin
         frame = new JFrame();
         frame.setLayout(null);
         frame.setVisible(true);
+        frame.setTitle("Login");
         frame.setBounds(0, 0, CONST_FRAME_WIDTH, CONST_FRAME_HEIGHT);
         frame.setLocationRelativeTo(null);
 
@@ -56,7 +59,7 @@ public class PaginaLogin
         labelParola.setVisible(true);
         labelParola.setBounds(15, 60, 70, 25);
 
-        fieldParola = new JTextField(10);
+        fieldParola = new JPasswordField(10);
         panel.add(fieldParola);
         fieldParola.setLayout(null);
         fieldParola.setVisible(true);
@@ -73,5 +76,16 @@ public class PaginaLogin
         buttonSignUp.setLayout(null);
         buttonSignUp.setVisible(true);
         buttonSignUp.setBounds(190, 100, 100, 30);
+
+        buttonSignUp.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                frame.dispose();
+                PaginaInregistrare object = new PaginaInregistrare();
+                object.afisareInterfata();
+            }
+        });
     }
 }
