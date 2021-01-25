@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CategorieRepository {
 
-    public void adaugaCatetegorie(Categorie categorieNoua) throws SQLException {
+    public void adaugaCatetegorie(Categorie categorieNoua){
 
         if (categorieNoua == null) {
             return;
@@ -28,10 +28,12 @@ public class CategorieRepository {
                     "VALUES('%s')", categorieNoua.getDenumire());
 
             stmt.executeUpdate(text);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
     }
 
-    public void stergeCategorieByDenumire(String denumire) throws SQLException {
+    public void stergeCategorieByDenumire(String denumire) {
 
         if (denumire.isEmpty()) {
             return;
@@ -47,10 +49,12 @@ public class CategorieRepository {
             String text = String.format("DELETE FROM categorii WHERE denumire = %s", denumire);
 
             stmt.executeUpdate(text);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
     }
 
-    public void modificareCategorie(String denumireVeche, String denumireNoua) throws SQLException {
+    public void modificareCategorie(String denumireVeche, String denumireNoua){
 
         if(denumireVeche.isEmpty() || denumireNoua.isEmpty()){
 
@@ -68,10 +72,12 @@ public class CategorieRepository {
 
             String text = String.format("UPDATE categorii SET denumire = '%s' WHERE denumire = '%s'", denumireNoua , denumireVeche);
             stmt.executeUpdate(text);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
     }
 
-    public List<Categorie> getListaCategorii() throws SQLException {
+    public List<Categorie> getListaCategorii(){
 
        List<Categorie> listaCategorii = new ArrayList<>();
 
@@ -91,6 +97,8 @@ public class CategorieRepository {
                     listaCategorii.add(categorie);
                 }
             }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         return listaCategorii;
     }
