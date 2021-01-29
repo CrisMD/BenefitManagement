@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class PaginaUtilizator
 {
-    private final int CONST_FRAME_WIDTH = 800;
+    private final int CONST_FRAME_WIDTH = 801;
     private final int CONST_FRAME_HEIGHT = 600;
     private final int CONST_MAX_BUTTONS = 8;
 
