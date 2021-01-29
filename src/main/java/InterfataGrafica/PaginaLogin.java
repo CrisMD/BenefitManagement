@@ -19,12 +19,6 @@ public class PaginaLogin
     private JButton buttonSignIn;
     private JButton buttonSignUp;
 
-    public static void main(String[] args)
-    {
-        PaginaLogin object = new PaginaLogin();
-        object.afisareInterfata();
-    }
-
     public void afisareInterfata()
     {
         frame = new JFrame();
